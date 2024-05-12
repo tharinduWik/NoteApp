@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:text="Add Note"
+        android:text="Add Your Task Notes"
         android:textColor="@color/orange"
         android:textSize="24sp" />
 
@@ -33,23 +33,38 @@
     <EditText
         android:id="@+id/titleEditText"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="69dp"
         android:layout_marginBottom="592dp"
         android:background="@drawable/orange_border"
         android:fontFamily="@font/poppins_light"
-        android:hint="Enter the title"
+        android:hint="Enter task title"
         android:maxLines="1"
         android:padding="12dp"
         android:textColor="@color/orange"
         android:textSize="20sp" />
 
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/orange_border"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Enter task date"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/Blue"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/contentEditText"
-        android:layout_width="390dp"
-        android:layout_height="576dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/orange_border"
         android:fontFamily="@font/poppins_light"

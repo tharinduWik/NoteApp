@@ -28,11 +28,13 @@ class UpdateNoteActivity : AppCompatActivity() {
         val note = db.getNoteBuId(noteId)
         binding.updateTitleEditText.setText(note.title)
         binding.UpdateContentEditText.setText((note.content))
+        binding.updateDateEditText.setText(note.date)
 
         binding.updateSaveButton.setOnClickListener(){
             val newTitle = binding.updateTitleEditText.text.toString()
             val newContent = binding.UpdateContentEditText.text.toString()
-            val updateNote = Note(noteId,newTitle,newContent)
+            val newDate = binding.updateDateEditText.text.toString()
+            val updateNote = Note(noteId,newTitle,newContent,newDate)
             db.updateNote(updateNote)
             finish()
             Toast.makeText(this,"Changes Saved",Toast.LENGTH_SHORT).show()

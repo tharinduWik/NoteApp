@@ -20,6 +20,7 @@ class NotesAdapter(private var notes:List<Note>,context:Context):
         val contentTextureView:TextView = itemView.findViewById(R.id.contentTextView)
         val updateButton:ImageView = itemView.findViewById(R.id.UpdateButton)
         val deleteButton:ImageView = itemView.findViewById(R.id.deleteButton)
+        val dateTextView:TextView = itemView.findViewById(R.id.DateView)
 
     }
 
@@ -34,6 +35,7 @@ class NotesAdapter(private var notes:List<Note>,context:Context):
        val note = notes[position]
         holder.titleTextureView.text = note.title
         holder.contentTextureView.text= note.content
+        holder.dateTextView.text = note.date
 
         holder.updateButton.setOnClickListener{
             val intent =Intent(holder.itemView.context,UpdateNoteActivity::class.java).apply {

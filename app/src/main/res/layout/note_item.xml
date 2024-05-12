@@ -48,6 +48,20 @@
             </RelativeLayout>
 
         <TextView
+            android:id="@+id/DateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="Date"
+            android:textColor="@color/Blue" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+        <TextView
             android:id="@+id/contentTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,6 +69,8 @@
             android:fontFamily="@font/poppins_light"
             android:maxLines="3"
             android:text="Content" />
+
+        </RelativeLayout>
     </LinearLayout>
 
 

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:text="Edit Note"
+        android:text="Edit Your Task"
         android:textColor="@color/orange"
         android:textSize="24sp" />
 
@@ -31,12 +31,12 @@
 
     <EditText
         android:id="@+id/updateTitleEditText"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="69dp"
-        android:layout_marginBottom="592dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="584dp"
         android:background="@drawable/orange_border"
         android:fontFamily="@font/poppins_light"
         android:hint="Enter the title"
@@ -46,10 +46,27 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/UpdateContentEditText"
-        android:layout_width="390dp"
-        android:layout_height="576dp"
+        android:id="@+id/updateDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="516dp"
+        android:background="@drawable/orange_border"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Enter task date"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/Blue"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/UpdateContentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="499dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/orange_border"
         android:fontFamily="@font/poppins_light"
         android:gravity="top"
