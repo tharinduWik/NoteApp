@@ -29,6 +29,7 @@ class NotesAdapter(private var notes:List<Note>,context:Context):
         return NoteViewHolder(view)
     }
 
+    //size of the notes list
     override fun getItemCount(): Int = notes.size
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
@@ -50,6 +51,7 @@ class NotesAdapter(private var notes:List<Note>,context:Context):
 
         }
     }
+    //refresh the data
     fun refreshData(newNotes:List<Note>){
         notes = newNotes
         notifyDataSetChanged()

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onRestart() {
+    override fun onRestart() {  // Refresh the data
         super.onRestart()
         notesAdapter.refreshData(db.getAllNotes())
     }

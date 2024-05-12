@@ -20,7 +20,9 @@ class UpdateNoteActivity : AppCompatActivity() {
         db = NoteDatabseHelper(this)
 
         noteId = intent.getIntExtra("note_id",-1)
+        // Check note ID is valid
         if(noteId == -1){
+            // If note ID is invalid, finish the activity
             finish()
             return
         }

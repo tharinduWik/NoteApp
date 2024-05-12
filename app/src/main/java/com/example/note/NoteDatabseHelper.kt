@@ -26,7 +26,7 @@ class NoteDatabseHelper(context: Context):SQLiteOpenHelper(context,DATABASE_NAME
     }
 
 
-
+    // Create the database
     override fun onCreate(db: SQLiteDatabase?) {
        val createTableQuery ="CREATE TABLE $TABLE_NAME($COLUMN_ID INTEGER PRIMARY KEY,$COLUMN_TITLE TEXT,$COLUMN_CONTENT TEXT,$COLUMN_DATE TEXT)"
         db?.execSQL(createTableQuery)
@@ -37,6 +37,7 @@ class NoteDatabseHelper(context: Context):SQLiteOpenHelper(context,DATABASE_NAME
         db?.execSQL(dropTableQuery)
         onCreate(db)
     }
+    // insert a new note to database
     fun insertNote(note:Note){
         val db = writableDatabase
         val values = ContentValues().apply {
@@ -67,6 +68,7 @@ class NoteDatabseHelper(context: Context):SQLiteOpenHelper(context,DATABASE_NAME
         db.close()
         return notesList
     }
+    //update an note
     fun updateNote(note:Note){
         val db = writableDatabase
         val values = ContentValues().apply {
@@ -94,7 +96,7 @@ class NoteDatabseHelper(context: Context):SQLiteOpenHelper(context,DATABASE_NAME
         db.close()
         return  Note(id, title, content, date)
     }
-
+    //delete note
     fun deleteNote(noteId:Int){
         val db = writableDatabase
         val whereClause = "$COLUMN_ID = ?"

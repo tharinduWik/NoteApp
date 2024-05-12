@@ -20,12 +20,12 @@ class AddNoteActivity : AppCompatActivity() {
 
         db = NoteDatabseHelper(this)
 
-        binding.saveButton.setOnClickListener{
+        binding.saveButton.setOnClickListener{// Set click listener for the save button
             val title = binding.titleEditText.text.toString()
             val content = binding.contentEditText.text.toString()
             val date = binding.dateEditText.text.toString()
             val note = Note(0,title,content, date)
-            db.insertNote(note)
+            db.insertNote(note)  // Insert the note
             finish()
             Toast.makeText(this,"Note Saved",Toast.LENGTH_SHORT).show()
 
