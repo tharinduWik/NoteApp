@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,AddNoteActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     override fun onRestart() {  // Refresh the data
